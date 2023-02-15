@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/scss/reset';
+
+body {
+	background-color: #2b2b2b;
+	color: #ffffff;
+	font-family: 'Righteous', cursive;
+}
+
+button {
+	padding: 10px;
+	background: #a259ff;
+	border-radius: 20px;
+	border: none;
+	color: #ffffff;
+	margin-top: 15px;
+	margin-bottom: 10px;
+
+	&:hover {
+		cursor: pointer;
+		-delay: 0s;
+		background: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
+	}
+}
+a:hover {
+	cursor: pointer;
+}

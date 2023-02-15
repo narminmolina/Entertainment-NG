@@ -1,0 +1,34 @@
+{
+	"semi": true,
+	"tabWidth": 2,
+	"useTabs": true,
+	"printWidth": 140,
+	"singleQuote": true,
+	"preserve": "always",
+	"trailingComma": "es5",
+	"arrowParens": "avoid",
+	"proseWrap": "preserve",
+	"importOrder": [
+		"@libs/(.*)$",
+		"@components/(.*)$",
+		"@imgs/(.*)$",
+		"@vectors/(.*)$",
+		"@icons/(.*)$",
+		"@sounds/(.*)$",
+		"@styles/(.*)$",
+		"^utils/(.*)$",
+		"^constants/(.*)$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"overrides": [
+		{
+			"files": "package.json",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": false
+			}
+		}
+	]
+}
