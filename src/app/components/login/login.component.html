@@ -1,15 +1,15 @@
-<div class="login-container">
-	<div class="login-wrapper">
+<div class="login-register-container">
+	<form class="login-register-wrapper">
 		<h1>Log In</h1>
 		<label>Email address</label>
-		<input type="email" placeholder="email" />
+		<input type="email" placeholder="email" name="email" [(ngModel)]="email" />
 		<label>Password</label>
-		<input type="password" placeholder="password" />
-		<button class="btn">Submit</button>
-		<a>Register</a>
-	</div>
+		<input type="password" placeholder="password" name="password" [(ngModel)]="password" />
+		<button class="btn" (click)="login()">Submit</button>
+		<a (click)="navigateToRegistration()">Register</a>
+	</form>
 	<div class="card-left-border"></div>
 	<div class="card-top-border"></div>
-	<div class="card-right-border" ></div>
+	<div class="card-right-border"></div>
 	<div class="card-bottom-border"></div>
 </div>

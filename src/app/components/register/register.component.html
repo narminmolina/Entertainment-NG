@@ -1,0 +1,18 @@
+<div class="login-register-container">
+	<form class="login-register-wrapper">
+		<h1>Register</h1>
+		<label>Full Name</label>
+		<input type="text" placeholder="Full Name" name="name" [(ngModel)]="name" />
+		<label>Email address</label>
+		<input type="email" placeholder="email" [(ngModel)]="email" name="email" />
+		<label>Password</label>
+		<input type="password" placeholder="password" [(ngModel)]="password" name="password" />
+		<label>Confirm Password</label>
+		<input type="password" placeholder="confirm password" [(ngModel)]="confirmPassword" name="confirmPassword" />
+		<button class="btn" (click)="register()">Submit</button>
+	</form>
+	<div class="card-left-border"></div>
+	<div class="card-top-border"></div>
+	<div class="card-right-border"></div>
+	<div class="card-bottom-border"></div>
+</div>

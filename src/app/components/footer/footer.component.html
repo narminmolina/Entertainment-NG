@@ -1,0 +1,14 @@
+<footer>
+	<nav>
+		<ul>
+			<li *ngFor="let item of navItems">
+				<a [routerLink]="item.to">
+					<span
+						><mat-icon>{{ item.icon }}</mat-icon>
+					</span>
+					<p>{{ item.label }}</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</footer>

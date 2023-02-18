@@ -25,3 +25,115 @@ button {
 a:hover {
 	cursor: pointer;
 }
+
+.login-register-container {
+	margin: 70px auto;
+	max-width: 355px;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 12px;
+	position: relative;
+	overflow: hidden;
+	padding: 1px;
+	.login-register-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		position: relative;
+		z-index: 1;
+		padding: 27px 37px;
+		border-radius: 12px;
+		background-color: rgba(0, 0, 0, 0);
+		h1,
+		a {
+			text-align: center;
+		}
+		label {
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		input {
+			padding: 10px 15px;
+			border: 1px solid #858584;
+			border-radius: 20px;
+			&::placeholder {
+				color: #2b2b2b;
+				font-size: 14px;
+			}
+			&:focus {
+				outline-color: #a259ff;
+			}
+		}
+	}
+	&:hover {
+		.login-register-wrapper {
+			background-color: rgb(34, 34, 34);
+		}
+		.card-left-border,
+		.card-right-border {
+			height: 100%;
+		}
+		.card-top-border,
+		.card-bottom-border {
+			width: 100%;
+		}
+		.card-bottom-border,
+		.card-left-border,
+		.card-right-border,
+		.card-top-border {
+			opacity: 1;
+			transition-delay: 0.5s;
+			transition: all 0.3s;
+		}
+	}
+
+	.card-bottom-border,
+	.card-left-border,
+	.card-right-border,
+	.card-top-border {
+		position: absolute;
+		opacity: 0;
+	}
+	.card-left-border {
+		left: 0%;
+		top: auto;
+		right: auto;
+		bottom: 0%;
+		width: 10px;
+		height: 0%;
+		margin-left: -2px;
+		background-color: #feac5e;
+		white-space: normal;
+		transition-delay: 1.5;
+	}
+	.card-top-border {
+		left: 0%;
+		top: 0%;
+		right: auto;
+		bottom: auto;
+		width: 0%;
+		height: 10px;
+		margin-top: -1px;
+		background-image: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
+	}
+	.card-right-border {
+		left: auto;
+		top: 0%;
+		right: 0%;
+		bottom: auto;
+		width: 10px;
+		height: 0%;
+		background-color: #4bc0c8;
+	}
+	.card-bottom-border {
+		left: auto;
+		top: auto;
+		right: 0%;
+		bottom: 0%;
+		width: 0%;
+		height: 10px;
+		background-image: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
+	}
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
