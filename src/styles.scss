@@ -135,5 +135,25 @@ a:hover {
 	}
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.page-title {
+  text-align: center;
+	font-size: 2vw;
+	padding: 8px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 16px;
+}

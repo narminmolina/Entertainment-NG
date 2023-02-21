@@ -1,0 +1,43 @@
+<nav class="pagination-nav" aria-label="pagination">
+	<ul>
+		<li>
+			<button
+				class="nav-btn"
+				*ngIf="current !== 1"
+				aria-label="Go To Previous Page"
+				[attr.aria-disabled]="current === 1"
+				(click)="onPrevious()"
+			>
+				<mat-icon>navigate_before</mat-icon>
+			</button>
+		</li>
+		<li *ngFor="let page of pages">
+			<a
+				*ngIf="page !== -1; else more"
+				[attr.aria-current]="page === current ? 'page' : null"
+				[attr.aria-label]="page === current ? 'Current Page, Page ' + page : 'Go to Page ' + page"
+				[class.current]="page === current"
+				tabindex="0"
+				(click)="onGoTo(page)"
+				(keyup.enter)="onGoTo(page)"
+			>
+				{{ page }}</a
+			>
+			<ng-template #more>
+				<a class="more"> ... </a>
+			</ng-template>
+		</li>
+
+		<li>
+			<button
+				class="nav-btn"
+				*ngIf="current !== total"
+				aria-label="Go To Next Page"
+				[attr.aria-disabled]="current === total"
+				(click)="onNext()"
+			>
+				<mat-icon>navigate_next</mat-icon>
+			</button>
+		</li>
+	</ul>
+</nav>

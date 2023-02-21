@@ -1,1 +1,13 @@
-<p>trending works!</p>
+<div class="container">
+	<h1 class="page-title">Trending Today</h1>
+	<div class="movie-card-wrapper">
+		<app-single-content *ngFor="let trendingShow of trendingShows" [movie]="trendingShow"></app-single-content>
+	</div>
+	<app-pagination
+		[current]="currentPage"
+		[total]="totalPages"
+		(goTo)="onGoTo($event)"
+		(next)="onNext($event)"
+		(previous)="onPrevious($event)"
+	></app-pagination>
+</div>

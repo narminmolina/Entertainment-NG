@@ -21,9 +21,12 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import {  HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TrendingSvgComponent } from './svgs/trending-svg/trending-svg.component';
+import { SingleContentComponent } from './components/single-content/single-content.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 @NgModule({
@@ -38,12 +41,15 @@ import { TrendingSvgComponent } from './svgs/trending-svg/trending-svg.component
     HeaderComponent,
     FooterComponent,
     TrendingSvgComponent,
+    SingleContentComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
       MatIconModule,
+      HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
