@@ -1,5 +1,17 @@
 <div class="container">
 	<h1 class="page-title">Movies</h1>
-  <button>Documentary</button>
-	<app-single-content></app-single-content>
+	<div class="genre-filter-wrapper">
+		<app-genres [genres]="movieGenres" (selectedGenres)="onMovieTvGenresSelected($event)"></app-genres>
+
+		<div class="movie-card-wrapper">
+			<app-single-content *ngFor="let movie of movies" [movie]="movie" [mediaType]="mediaType"></app-single-content>
+		</div>
+	</div>
+	<app-pagination
+		[current]="currentPage"
+		[total]="totalPages"
+		(goTo)="onGoTo($event)"
+		(next)="onNext($event)"
+		(previous)="onPrevious($event)"
+	></app-pagination>
 </div>

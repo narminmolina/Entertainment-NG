@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { ShowsService } from 'src/app/services/shows.service';
-import { Trending } from '../../Trending';
+import { Data } from '../../Trending';
 @Component({
 	selector: 'app-trending',
 	templateUrl: './trending.component.html',
 	styleUrls: ['./trending.component.scss'],
 })
 export class TrendingComponent {
-	data!: Trending;
+	data!: Data;
 	trendingShows: {}[] = [];
 	public currentPage: number = 1;
 	public totalPages:number= 20;

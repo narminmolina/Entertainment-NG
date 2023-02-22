@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SingleContentComponent {
 @Input() movie!:any
-
+  @Input() mediaType!: string;
 }

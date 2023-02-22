@@ -1,0 +1,11 @@
+<div *ngIf="genres" class="genre-wrapper">
+	<h1 class="page-title">Genres</h1>
+	<ul class="genre-list">
+		<li *ngFor="let genre of genres">
+			<label>
+				<input type="checkbox" [value]="genre.id" (change)="toggleGenre(genre.id, $event)" />
+				{{ genre.name }}
+			</label>
+		</li>
+	</ul>
+</div>

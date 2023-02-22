@@ -145,15 +145,30 @@ body {
 }
 
 .page-title {
-  text-align: center;
+	text-align: center;
 	font-size: 2vw;
 	padding: 8px;
 	text-transform: uppercase;
 	color: #fff;
+	margin-top: 10px;
 }
 
 .container {
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 0 16px;
+}
+
+.movie-card-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	column-gap: 30px;
+	row-gap: 15px;
+}
+
+.genre-filter-wrapper {
+	display: flex;
+	gap: 20px;
+	
 }

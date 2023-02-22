@@ -27,6 +27,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TrendingSvgComponent } from './svgs/trending-svg/trending-svg.component';
 import { SingleContentComponent } from './components/single-content/single-content.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { GenresComponent } from './components/genres/genres.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     TrendingSvgComponent,
     SingleContentComponent,
     PaginationComponent,
+    GenresComponent,
   ],
   imports: [
     BrowserModule,

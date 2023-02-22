@@ -1,1 +1,17 @@
-<p>tvseries works!</p>
+<div class="container">
+	<h1 class="page-title">Movies</h1>
+	<div class="genre-filter-wrapper">
+		<app-genres [genres]="tvGenres" (selectedGenres)="onMovieTvGenresSelected($event)"></app-genres>
+
+		<div class="movie-card-wrapper">
+			<app-single-content *ngFor="let series of tvSeries" [movie]="series" [mediaType]="mediaType"></app-single-content>
+		</div>
+	</div>
+	<app-pagination
+		[current]="currentPage"
+		[total]="totalPages"
+		(goTo)="onGoTo($event)"
+		(next)="onNext($event)"
+		(previous)="onPrevious($event)"
+	></app-pagination>
+</div>

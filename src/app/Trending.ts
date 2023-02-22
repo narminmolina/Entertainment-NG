@@ -1,4 +1,4 @@
-export interface Trending {
+export interface Data {
   page:number,
   results:{}[],
   total_pages:number,
