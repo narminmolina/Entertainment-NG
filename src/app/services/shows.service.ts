@@ -35,4 +35,15 @@ export class ShowsService {
 		const params = new HttpParams().set('type', type);
 		return this.http.get<Genre>(url, { headers, params });
 	}
+
+   fetchSearchedShows(type:string, searchText:string, pageNumber:number): Observable<Data> {
+		let url = `https://api.themoviedb.org/3/search/${type}?api_key=${this.apiKey}&language=en-US&query=${searchText}&page=${pageNumber}&include_adult=false`;
+    const headers=new HttpHeaders().set('authorization', 'Bearer ${apiKey}')
+		const params = new HttpParams().set('type', type);
+		return this.http.get<Data>(url, { headers, params });
+	}
+
 }
+
+
+	

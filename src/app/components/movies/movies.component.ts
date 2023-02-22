@@ -12,7 +12,6 @@ export class MoviesComponent {
 
 	public currentPage: number = 1;
 	public totalPages:number= 20;
-
 public movieGenres: {id: number, name: string}[] = [];
 
 	constructor(private shows: ShowsService) {}

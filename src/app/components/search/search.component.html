@@ -1,1 +1,24 @@
-<p>search works!</p>
+<div class="container">
+	<header class="search-header">
+		<div class="search-box">
+			<input placeholder="Search"  type="text" [(ngModel)]="searchText" />
+		</div>
+		<button class="search-btn" (click)="onSearchInputChange()">	<mat-icon>search</mat-icon></button>
+	</header>
+	<div class="tab">
+		<button [ngClass]="{ active: type === 'movie' }" (click)="onTabButtonClick('movie')">Movies</button>
+		<button [ngClass]="{ active: type === 'tv' }" (click)="onTabButtonClick('tv')">TV</button>
+	</div>
+	<ng-container *ngIf="movies.length > 0">
+		<div class="movie-card-wrapper">
+			<app-single-content *ngFor="let movie of movies" [movie]="movie" [mediaType]="type"></app-single-content>
+		</div>
+		<app-pagination
+			[current]="currentPage"
+			[total]="totalPages"
+			(goTo)="onGoTo($event)"
+			(next)="onNext($event)"
+			(previous)="onPrevious($event)"
+		></app-pagination>
+	</ng-container>
+</div>
