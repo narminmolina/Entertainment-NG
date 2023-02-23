@@ -3,7 +3,14 @@
 	margin: 15px 0;
 	gap: 15px;
 	justify-content: space-between;
-
+	.search-btn {
+		padding: 15px 16px;
+		border-radius: 4px;
+		margin: 0px;
+		&:hover {
+			background: linear-gradient(to top right, #fac798, #ef60ff, #4bc0c8);
+		}
+	}
 	.search-box {
 		display: inline-flex;
 		background-color: rgb(56, 52, 57);
@@ -37,15 +44,12 @@
 		white-space: normal;
 		text-transform: uppercase;
 		border-radius: 5px;
-	
+		&:hover {
+			background: linear-gradient(to top right, #fac798, #ef60ff, #4bc0c8);
+		}
 	}
 }
 
-.search-btn {
-	padding: 15px 16px;
-	border-radius: 4px;
-	margin: 0px;
+.active {
+	border-bottom: 2px solid white;
 }
-	.active {
-			border-bottom: 2px solid white;
-		}

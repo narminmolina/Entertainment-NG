@@ -1,10 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import './assets/scss/reset';
 
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
 body {
 	background-color: #2b2b2b;
 	color: #ffffff;
 	font-family: 'Righteous', cursive;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 16px;
 }
 
 button {
@@ -85,63 +100,54 @@ a:hover {
 			transition: all 0.3s;
 		}
 	}
-
-	.card-bottom-border,
-	.card-left-border,
-	.card-right-border,
-	.card-top-border {
-		position: absolute;
-		opacity: 0;
-	}
-	.card-left-border {
-		left: 0%;
-		top: auto;
-		right: auto;
-		bottom: 0%;
-		width: 10px;
-		height: 0%;
-		margin-left: -2px;
-		background-color: #feac5e;
-		white-space: normal;
-		transition-delay: 1.5;
-	}
-	.card-top-border {
-		left: 0%;
-		top: 0%;
-		right: auto;
-		bottom: auto;
-		width: 0%;
-		height: 10px;
-		margin-top: -1px;
-		background-image: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
-	}
-	.card-right-border {
-		left: auto;
-		top: 0%;
-		right: 0%;
-		bottom: auto;
-		width: 10px;
-		height: 0%;
-		background-color: #4bc0c8;
-	}
-	.card-bottom-border {
-		left: auto;
-		top: auto;
-		right: 0%;
-		bottom: 0%;
-		width: 0%;
-		height: 10px;
-		background-image: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
-	}
 }
 
-html,
-body {
-	height: 100%;
+.card-bottom-border,
+.card-left-border,
+.card-right-border,
+.card-top-border {
+	position: absolute;
+	opacity: 0;
 }
-body {
-	margin: 0;
-	font-family: Roboto, 'Helvetica Neue', sans-serif;
+.card-left-border {
+	left: 0%;
+	top: auto;
+	right: auto;
+	bottom: 0%;
+	width: 10px;
+	height: 0%;
+	margin-left: -2px;
+	background-color: #feac5e;
+	white-space: normal;
+	transition-delay: 1.5;
+}
+.card-top-border {
+	left: 0%;
+	top: 0%;
+	right: auto;
+	bottom: auto;
+	width: 0%;
+	height: 10px;
+	margin-top: -1px;
+	background-image: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
+}
+.card-right-border {
+	left: auto;
+	top: 0%;
+	right: 0%;
+	bottom: auto;
+	width: 10px;
+	height: 0%;
+	background-color: #4bc0c8;
+}
+.card-bottom-border {
+	left: auto;
+	top: auto;
+	right: 0%;
+	bottom: 0%;
+	width: 0%;
+	height: 10px;
+	background-image: linear-gradient(to right, #fac798, #ef60ff, #4bc0c8);
 }
 
 .page-title {
@@ -151,12 +157,6 @@ body {
 	text-transform: uppercase;
 	color: #fff;
 	margin-top: 10px;
-}
-
-.container {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0 16px;
 }
 
 .movie-card-wrapper {
@@ -170,5 +170,4 @@ body {
 .genre-filter-wrapper {
 	display: flex;
 	gap: 20px;
-	
 }
